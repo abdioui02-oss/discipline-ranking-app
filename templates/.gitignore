@@ -2,3 +2,4 @@ veny/
 __pycache__/
 .idea/
 datanase.db
+users.json
