@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Task</title>
+</head>
+<body>
+
+<h1>Add Task</h1>
+
+<p>{{ message }}</p>
+
+{% if users|length > 0 %}
+<form method="POST">
+
+    <p>User:</p>
+    <select name="username">
+        {% for user in users %}
+            <option value="{{ user['name'] }}">{{ user['name'] }}</option>
+        {% endfor %}
+    </select>
+
+    <p>Task:</p>
+    <select name="task">
+        {% for task_name in tasks %}
+            <option value="{{ task_name }}">{{ task_name }}</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Add task</button>
+
+</form>
+{% endif %}
+
+<a href="/">Go home</a>
+
+</body>
+</html>

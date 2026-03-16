@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task History</title>
+</head>
+<body>
+
+<h1>Task History</h1>
+
+<ul>
+    {% for row in history %}
+        <li>
+            {{ row["username"] }} -
+            {{ row["task_name"] }} -
+            {{ row["points"] }} points
+        </li>
+    {% endfor %}
+</ul>
+
+<a href="/">Go home</a>
+
+</body>
+</html>
